@@ -9,12 +9,11 @@ for iter = 1:num_iters
 
     % ====================== SU CÓDIGO ======================
 
-
-
-
-
-
-
+    % Nueva funcion de gradiante descendente
+    gradient = 1 / m * (X' * X * theta - X' * y);
+    
+    % Actualizacion simultanea
+    theta = theta - alpha * gradient;
 
     % ============================================================
 

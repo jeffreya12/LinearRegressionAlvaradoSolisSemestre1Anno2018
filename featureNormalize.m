@@ -17,13 +17,16 @@ sigma = zeros(1, size(X, 2));
 % Nota: octave tiene la funciones mean y std que le pueden ser Ãºtiles
 %       
 
+% Media
+mu = mean(X);
 
+% Desviacion estandar
+sigma = std(X);
 
-
-
-
-
-
+% "repmat" repite la matriz con mu segun el tamaño del dataset
+% sigma sigue el mismo trato de mu con repmat
+% Resta mu al dataset y divide cada valor entre su respectivo sigma
+X_norm = (X - repmat(mu, [size(X, 1), 1])) ./ (repmat(sigma, [size(X, 1), 1]));
 
 % ============================================================
 

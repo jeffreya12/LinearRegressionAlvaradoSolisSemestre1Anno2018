@@ -12,13 +12,19 @@ for iter = 1:num_iters
     %
     % Nota: Para debuggear podría ir imprimiendo el costo, con los parámetros encontrados en cada iteración
     %
+    
+    % Set de datos
+    x = X(:, 2)
+    
+    % Hipotesis
+    h = theta(1) + (theta(2) * x);
 
+    % Actualizaci�n simult�nea
+    theta0 = theta(1) - alpha * (1 / m) * sum(h - y);
+    theta1  = theta(2) - alpha * (1 / m) * sum((h - y) .* x);
 
-
-
-
-
-
+    theta = [theta0; theta1];
+    
     % ============================================================
 
     % Guardar el costo J de cada iteración

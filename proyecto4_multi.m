@@ -1,3 +1,4 @@
+
 %% ================ Sección 1: Feature Normalization ================
 
 
@@ -53,8 +54,10 @@ fprintf('\n');
 % Estimar el precio de una casa de 1650 pies cuadrados y 3 cuartos
 % ====================== SU CÓDIGO ======================
 % recordar que nuestros datos están normalizados
-price = 0; % hay que cambiar esto
 
+% Se resta cada caracteristica entre su media y se divide entre su desviacion
+% Luego se define su precio multiplicandolo por su theta
+price = [1 (1650 - mu(1)) / sigma(1) (3 - mu(2)) / sigma(2)] * theta;
 
 % ============================================================
 
@@ -89,8 +92,10 @@ fprintf('\n');
 
 % Estimar el precio de una casa de 1650 pies cuadrados y 3 cuartos
 % ====================== SU CÓDIGO ======================
-price = 0; % cambiar esto
 
+% Se multiplica cada caracteristica con el theta calculado por la ecuacion 
+% normal
+price = [1 1650 3] * theta;
 
 % ============================================================
 

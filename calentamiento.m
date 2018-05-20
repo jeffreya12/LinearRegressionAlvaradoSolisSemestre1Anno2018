@@ -4,14 +4,9 @@ function A = warmUpExercise()
 A = [];
 % ============= SU CÓDIGO ==============
 
-
-
-
-
-
-
+% eye(n) retorna una matriz identidad nxn
+A = eye(5);
 
 % ===========================================
-
 
 end
