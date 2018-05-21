@@ -14,7 +14,7 @@ for iter = 1:num_iters
     %
     
     % Set de datos
-    x = X(:, 2)
+    x = X(:, 2);
     
     % Hipotesis
     h = theta(1) + (theta(2) * x);
